@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    /* Paper-White Mode (Default when dark class is removed) */
+    --bg-main: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --bg-card-elevated: #F1F3F5;
+    --border-color: #E5E7EB;
+    --text-primary: #111827;
+    --text-muted: #6B7280;
+    --modal-bg: #FFFFFF;
+  }
+
+  /* Warm-Charcoal Dark Mode (Default) */
+  html.dark {
+    --bg-main: #121212;
+    --bg-card: #1E1E1E;
+    --bg-card-elevated: #262626;
+    --border-color: #2E2E2E;
+    --text-primary: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --modal-bg: #1E1E1E;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Custom smooth scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2E2E2E;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3E3E3E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Theme utility mappings */
+.bg-dark-bg {
+  background-color: var(--bg-main) !important;
+}
+
+.bg-dark-card {
+  background-color: var(--bg-card) !important;
+}
+
+.bg-dark-cardElevated {
+  background-color: var(--bg-card-elevated) !important;
+}
+
+.border-dark-border {
+  border-color: var(--border-color) !important;
+}
+
+.text-dark-text {
+  color: var(--text-primary) !important;
+}
+
+.text-dark-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

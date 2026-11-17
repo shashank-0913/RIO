@@ -1,0 +1,575 @@
+import { Listing, CityType } from '../types';
+
+export const CITIES: CityType[] = [
+  'Visakhapatnam',
+  'Hyderabad',
+  'Bengaluru',
+  'Mumbai',
+  'Delhi NCR',
+  'Chennai',
+  'Pune',
+];
+
+export const MOCK_LOCALITIES: Record<CityType, string[]> = {
+  Visakhapatnam: [
+    'MVP Colony',
+    'Siripuram',
+    'Beach Road',
+    'Madhurawada',
+    'Dwaraka Nagar',
+    'Gajuwaka',
+    'Rushikonda',
+    'Seethammadhara',
+  ],
+  Hyderabad: [
+    'Gachibowli',
+    'Hitec City',
+    'Jubilee Hills',
+    'Madhapur',
+    'Kondapur',
+    'Banjara Hills',
+    'Kukatpally',
+  ],
+  Bengaluru: [
+    'Indiranagar',
+    'Koramangala',
+    'HSR Layout',
+    'Whitefield',
+    'Jayanagar',
+    'Bellandur',
+  ],
+  Mumbai: [
+    'Bandra West',
+    'Andheri East',
+    'Juhu',
+    'Powai',
+    'Colaba',
+    'Thane West',
+  ],
+  'Delhi NCR': [
+    'Cyber City Gurgaon',
+    'Hauz Khas',
+    'Connaught Place',
+    'Noida Sector 62',
+    'Saket',
+  ],
+  Chennai: [
+    'T. Nagar',
+    'Adyar',
+    'Anna Nagar',
+    'Velachery',
+    'Besant Nagar',
+  ],
+  Pune: [
+    'Koregaon Park',
+    'Kothrud',
+    'Baner',
+    'Viman Nagar',
+    'Hinjewadi',
+  ],
+};
+
+export const MOCK_LISTINGS: Listing[] = [
+  {
+    id: 'rio-101',
+    seller_id: 'sel-1',
+    status: 'active',
+    title: 'Apple iPhone 15 Pro 128GB (Natural Titanium) with Bill & Box',
+    description: 'Bought in Dec 2023 from Apple Store Mumbai. 96% battery health, completely scratchless with Spigen tempered glass and original braided cable. 2 months AppleCare+ warranty remaining. Selling because upgraded to 16 Pro.',
+    price: 84500,
+    originalPrice: 134900,
+    isNegotiable: true,
+    category: 'Mobiles & Electronics',
+    condition: 'Like New',
+    city: 'Visakhapatnam',
+    locality: 'MVP Colony Sector 3',
+    distanceKm: 2.4,
+    images: [
+      'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '35 mins ago',
+    specs: {
+      'Storage': '128 GB',
+      'RAM': '8 GB',
+      'Color': 'Natural Titanium',
+      'Battery Health': '96%',
+      'Warranty': '2 Months Active',
+      'Accessories': 'Original Box, Bill & USB-C Cable'
+    },
+    seller: {
+      id: 'sel-1',
+      name: 'Aditya Patnaik',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'March 2022',
+      rating: 4.9,
+      reviewsCount: 38,
+      isVerified: true,
+      verificationBadges: ['Aadhaar KYC', 'Phone Verified', 'UPI Verified'],
+      responseTime: 'Replies within 10 mins',
+      city: 'Visakhapatnam'
+    },
+    isFeatured: true,
+    viewsCount: 412,
+    likesCount: 29
+  },
+  {
+    id: 'rio-102',
+    seller_id: 'sel-2',
+    status: 'active',
+    title: 'Royal Enfield Hunter 350 Dapper Ash (Single Owner, Low KM)',
+    description: '2023 March model. Single owner, meticulously maintained with company service records. Done only 6,800 KM. Zero accidents, insurance valid till 2028 with 5-year bumper-to-bumper. Fitted with authentic RE sump guard and bar-end mirrors.',
+    price: 138000,
+    originalPrice: 178000,
+    isNegotiable: true,
+    category: 'Bikes & Cars',
+    condition: 'Gently Used',
+    city: 'Visakhapatnam',
+    locality: 'Siripuram Junction',
+    distanceKm: 4.1,
+    images: [
+      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '2 hours ago',
+    specs: {
+      'Model Year': '2023',
+      'KM Driven': '6,800 km',
+      'Fuel Type': 'Petrol',
+      'Ownership': '1st Owner',
+      'Insurance': 'Valid till March 2028',
+      'Registration': 'AP 39 (Visakhapatnam)'
+    },
+    seller: {
+      id: 'sel-2',
+      name: 'K. Sai Krishna',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'July 2021',
+      rating: 4.8,
+      reviewsCount: 52,
+      isVerified: true,
+      verificationBadges: ['Govt ID Verified', 'RC Verified'],
+      responseTime: 'Replies in 15 mins',
+      city: 'Visakhapatnam'
+    },
+    isFeatured: true,
+    viewsCount: 680,
+    likesCount: 84
+  },
+  {
+    id: 'rio-103',
+    seller_id: 'sel-3',
+    status: 'active',
+    title: 'Solid Sheesham Teak Wood 6-Seater Dining Table with Chairs',
+    description: 'Purchased from Urban Ladder 1.5 years ago. Heavy authentic Sheesham wood with natural teak finish. Comes with 6 cushioned chairs. No termites, no scratches, pristine condition. Relocating to Bangalore so selling immediately.',
+    price: 24500,
+    originalPrice: 48000,
+    isNegotiable: false,
+    category: 'Furniture',
+    condition: 'Like New',
+    city: 'Visakhapatnam',
+    locality: 'Madhurawada Car Shed',
+    distanceKm: 8.5,
+    images: [
+      'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '4 hours ago',
+    specs: {
+      'Material': 'Solid Sheesham Wood',
+      'Seating Capacity': '6 Persons',
+      'Table Dimensions': '175cm x 90cm x 76cm',
+      'Cushion Fabric': 'Grey Textured Linen',
+      'Age': '18 Months'
+    },
+    seller: {
+      id: 'sel-3',
+      name: 'Sravani Narayana',
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'January 2023',
+      rating: 5.0,
+      reviewsCount: 14,
+      isVerified: true,
+      verificationBadges: ['Aadhaar KYC', 'Phone Verified'],
+      responseTime: 'Replies within 30 mins',
+      city: 'Visakhapatnam'
+    },
+    viewsCount: 230,
+    likesCount: 18
+  },
+  {
+    id: 'rio-104',
+    seller_id: 'sel-4',
+    status: 'active',
+    title: 'Sony WH-1000XM5 Wireless Noise Cancelling Headphones (Silver)',
+    description: 'Industry-leading noise cancellation. 8 months old, barely used indoors during WFH calls. Comes with original hardshell case, 3.5mm jack cable, flight adapter, and retail box. Pristine pads with zero sweat or marks.',
+    price: 19500,
+    originalPrice: 34990,
+    isNegotiable: true,
+    category: 'Mobiles & Electronics',
+    condition: 'Like New',
+    city: 'Visakhapatnam',
+    locality: 'Beach Road, Pandurangapuram',
+    distanceKm: 3.2,
+    images: [
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '5 hours ago',
+    specs: {
+      'Battery Life': '30 Hours with ANC',
+      'Color': 'Platinum Silver',
+      'Bluetooth': '5.2 with LDAC & Multipoint',
+      'Microphones': '8 Mics with Auto NC Optimizer',
+      'Box & Accessories': 'All Original Included'
+    },
+    seller: {
+      id: 'sel-4',
+      name: 'Dr. Vikram Rao',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'October 2020',
+      rating: 4.95,
+      reviewsCount: 67,
+      isVerified: true,
+      verificationBadges: ['Govt ID Verified', 'Verified Doctor'],
+      responseTime: 'Replies in 5 mins',
+      city: 'Visakhapatnam'
+    },
+    viewsCount: 512,
+    likesCount: 44
+  },
+  {
+    id: 'rio-105',
+    seller_id: 'sel-5',
+    status: 'active',
+    title: 'LG 260L 3-Star Smart Inverter Double Door Refrigerator (Shiny Steel)',
+    description: 'Energy-saving double door fridge with Multi Air Flow cooling, Toughened glass shelves, and anti-bacterial gasket. Runs quietly. Compessor has 8 years brand warranty remaining. Selling due to house shifting.',
+    price: 15400,
+    originalPrice: 28990,
+    isNegotiable: true,
+    category: 'Appliances',
+    condition: 'Gently Used',
+    city: 'Visakhapatnam',
+    locality: 'Gajuwaka Industrial Zone',
+    distanceKm: 9.8,
+    images: [
+      'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '6 hours ago',
+    specs: {
+      'Capacity': '260 Litres',
+      'Energy Rating': '3 Star BEE Certified',
+      'Cooling Type': 'Smart Inverter Frost-Free',
+      'Compressor Warranty': '8 Years Remaining',
+      'Shelves': 'Toughened Glass'
+    },
+    seller: {
+      id: 'sel-5',
+      name: 'Ramesh Naidu',
+      avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'August 2022',
+      rating: 4.7,
+      reviewsCount: 19,
+      isVerified: true,
+      verificationBadges: ['Phone Verified', 'UPI Verified'],
+      responseTime: 'Replies within 1 hour',
+      city: 'Visakhapatnam'
+    },
+    viewsCount: 180,
+    likesCount: 12
+  },
+  {
+    id: 'rio-106',
+    seller_id: 'sel-6',
+    status: 'active',
+    title: 'Apple MacBook Air M2 16GB RAM / 256GB SSD (Midnight Blue)',
+    description: 'Custom configured 16GB Unified Memory model. Midnight blue finish with zero dents or keyboard shine. Battery health 98% with only 42 cycle count. Perfect for software developers, video editors, and college students.',
+    price: 76000,
+    originalPrice: 119900,
+    isNegotiable: true,
+    category: 'Mobiles & Electronics',
+    condition: 'Like New',
+    city: 'Hyderabad',
+    locality: 'Hitec City, Cyber Towers',
+    distanceKm: 1.5,
+    images: [
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: 'Yesterday',
+    specs: {
+      'Processor': 'Apple M2 (8-core CPU / 8-core GPU)',
+      'RAM': '16 GB Unified Memory',
+      'Storage': '256 GB NVMe SSD',
+      'Battery Health': '98% (42 cycles)',
+      'Display': '13.6-inch Liquid Retina Display'
+    },
+    seller: {
+      id: 'sel-6',
+      name: 'Pooja Reddy',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'May 2021',
+      rating: 4.9,
+      reviewsCount: 45,
+      isVerified: true,
+      verificationBadges: ['Corporate ID Verified', 'Aadhaar Verified'],
+      responseTime: 'Replies within 5 mins',
+      city: 'Hyderabad'
+    },
+    isFeatured: true,
+    viewsCount: 890,
+    likesCount: 112
+  },
+  {
+    id: 'rio-107',
+    seller_id: 'sel-7',
+    status: 'active',
+    title: 'Fender Squier Classic Vibe 60s Stratocaster Guitar with Marshall 15W Amp',
+    description: '3-Color Sunburst electric guitar in pristine condition. Alnico single coil pickups with classic vintage chime. Bundled with Marshall MG15G guitar amplifier, padded gig bag, Planet Waves braided cable, and digital tuner.',
+    price: 32000,
+    originalPrice: 54500,
+    isNegotiable: false,
+    category: 'Books & Hobbies',
+    condition: 'Gently Used',
+    city: 'Bengaluru',
+    locality: 'Indiranagar 100ft Road',
+    distanceKm: 3.8,
+    images: [
+      'https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '1 day ago',
+    specs: {
+      'Body Material': 'Nato with Gloss Polyurethane finish',
+      'Pickups': 'Fender-Designed Alnico Single-Coil',
+      'Amp Included': 'Marshall MG15G 15 Watt',
+      'Accessories': 'Fender Deluxe Padded Bag, Cable, Stand'
+    },
+    seller: {
+      id: 'sel-7',
+      name: 'Devanathan K.',
+      avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'June 2023',
+      rating: 4.85,
+      reviewsCount: 22,
+      isVerified: true,
+      verificationBadges: ['Phone Verified', 'UPI Verified'],
+      responseTime: 'Replies within 20 mins',
+      city: 'Bengaluru'
+    },
+    viewsCount: 340,
+    likesCount: 56
+  },
+  {
+    id: 'rio-108',
+    seller_id: 'sel-8',
+    status: 'active',
+    title: 'Featherlite Helix Ergonomic High-Back Mesh Chair (Grey & Black)',
+    description: 'Original Featherlite ergonomic task chair with 3D adjustable armrests, multi-lock synchro-tilt mechanism, pneumatic height adjustment, and breathable German mesh back. Ideal for 8-10 hour workdays.',
+    price: 7800,
+    originalPrice: 16500,
+    isNegotiable: true,
+    category: 'Furniture',
+    condition: 'Like New',
+    city: 'Visakhapatnam',
+    locality: 'Dwaraka Nagar Main Rd',
+    distanceKm: 3.5,
+    images: [
+      'https://images.unsplash.com/photo-1580481077195-c3a9927b798b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '2 days ago',
+    specs: {
+      'Mechanism': 'Synchro-tilt with 4-position lock',
+      'Armrests': '3D Adjustable (Height, Depth, Angle)',
+      'Base': 'Heavy-duty Nylon 5-star castor base',
+      'Weight Capacity': '135 kg'
+    },
+    seller: {
+      id: 'sel-8',
+      name: 'Sunil Verma',
+      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'September 2022',
+      rating: 4.75,
+      reviewsCount: 31,
+      isVerified: true,
+      verificationBadges: ['Aadhaar KYC', 'Phone Verified'],
+      responseTime: 'Replies within 15 mins',
+      city: 'Visakhapatnam'
+    },
+    viewsCount: 420,
+    likesCount: 37
+  },
+  {
+    id: 'rio-109',
+    seller_id: 'sel-9',
+    status: 'active',
+    title: 'Hyundai i20 Asta (O) 1.2 Petrol MT (Sunroof, Single Owner)',
+    description: 'Top-end variant with electric sunroof, 10.25-inch infotainment with Bose 7-speaker sound system, wireless phone charging, blue link connected car tech. Non-accidental, fully comprehensive insurance valid, service history at Hyundai authorized center.',
+    price: 685000,
+    originalPrice: 980000,
+    isNegotiable: true,
+    category: 'Bikes & Cars',
+    condition: 'Gently Used',
+    city: 'Visakhapatnam',
+    locality: 'Seethammadhara North Ext.',
+    distanceKm: 5.2,
+    images: [
+      'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '3 days ago',
+    specs: {
+      'Year': '2022',
+      'KM Driven': '24,500 km',
+      'Fuel': 'Petrol MT',
+      'Variant': 'Asta (O) Sunroof',
+      'Color': 'Polar White',
+      'Tyres': 'Goodyear 80% thread remaining'
+    },
+    seller: {
+      id: 'sel-9',
+      name: 'Anand Chowdary',
+      avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'March 2020',
+      rating: 5.0,
+      reviewsCount: 9,
+      isVerified: true,
+      verificationBadges: ['Govt ID Verified', 'RC Ownership Verified'],
+      responseTime: 'Replies in 1 hour',
+      city: 'Visakhapatnam'
+    },
+    isFeatured: true,
+    viewsCount: 1420,
+    likesCount: 195
+  },
+  {
+    id: 'rio-110',
+    seller_id: 'sel-10',
+    status: 'active',
+    title: 'Complete UPSC Civil Services Study Collection (NCERT 6-12 + Standard Books)',
+    description: 'Complete syllabus set: Laxmikanth Polity (7th Ed), Ramesh Singh Economy, Spectrum Modern History, GC Leong Geography, Shankar IAS Environment, Nitin Singhania Art & Culture, plus high-yield handwritten toppers notes. Clean, unmarked pages.',
+    price: 4200,
+    originalPrice: 11500,
+    isNegotiable: false,
+    category: 'Books & Hobbies',
+    condition: 'Gently Used',
+    city: 'Delhi NCR',
+    locality: 'Old Rajinder Nagar / Karol Bagh',
+    distanceKm: 4.0,
+    images: [
+      'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '3 days ago',
+    specs: {
+      'Total Books': '28 Standard Texts + 14 Topper Booklets',
+      'Editions': 'Latest 2024-2025 Syllabus Edition',
+      'Condition': 'No pencil/highlighter marks on core books',
+      'Subjects Covered': 'GS 1, GS 2, GS 3, GS 4 & CSAT'
+    },
+    seller: {
+      id: 'sel-10',
+      name: 'Megha Sharma',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'April 2023',
+      rating: 4.9,
+      reviewsCount: 26,
+      isVerified: true,
+      verificationBadges: ['Phone Verified', 'UPI Verified'],
+      responseTime: 'Replies within 10 mins',
+      city: 'Delhi NCR'
+    },
+    viewsCount: 310,
+    likesCount: 48
+  },
+  {
+    id: 'rio-111',
+    seller_id: 'sel-1',
+    status: 'active',
+    title: 'IFB 7 Kg 5 Star AI Front Load Washing Machine (Silver)',
+    description: 'IFB Senorita SXS 7010 front loader with Steam Wash, Aqua Energie water softener, cradle wash for delicates, and 1200 RPM high-speed spin. 1.5 years old, spotless drum, serviced recently with descaling.',
+    price: 18900,
+    originalPrice: 38990,
+    isNegotiable: true,
+    category: 'Appliances',
+    condition: 'Like New',
+    city: 'Visakhapatnam',
+    locality: 'MVP Colony Sector 11',
+    distanceKm: 1.8,
+    images: [
+      'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '4 days ago',
+    specs: {
+      'Capacity': '7.0 kg',
+      'Spin Speed': '1200 RPM',
+      'Motor Warranty': '10 Years Brand Warranty',
+      'Energy Rating': '5 Star BEE',
+      'Special Features': 'Steam Wash, Inbuilt Heater, 3D Wash'
+    },
+    seller: {
+      id: 'sel-1',
+      name: 'Aditya Patnaik',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'March 2022',
+      rating: 4.9,
+      reviewsCount: 38,
+      isVerified: true,
+      verificationBadges: ['Aadhaar KYC', 'Phone Verified', 'UPI Verified'],
+      responseTime: 'Replies within 10 mins',
+      city: 'Visakhapatnam'
+    },
+    viewsCount: 290,
+    likesCount: 24
+  },
+  {
+    id: 'rio-112',
+    seller_id: 'sel-11',
+    status: 'active',
+    title: '2 BHK Fully Furnished Luxury Sea-Facing Apartment (Ready to Move)',
+    description: '1,320 sq.ft east-facing 2 BHK flat on the 5th floor with unhindered Bay of Bengal sea views from both balconies. Italian marble flooring, modular kitchen with chimney & hob, covered car parking, 100% DG power backup, 24/7 security.',
+    price: 6400000,
+    originalPrice: 7200000,
+    isNegotiable: true,
+    category: 'Property',
+    condition: 'Brand New',
+    city: 'Visakhapatnam',
+    locality: 'Beach Road, Sagar Nagar',
+    distanceKm: 5.6,
+    images: [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80'
+    ],
+    createdAt: '5 days ago',
+    specs: {
+      'Super Built-up Area': '1,320 sq.ft',
+      'Bedrooms': '2 BHK + 2 Bathrooms + 2 Balconies',
+      'Facing': 'East (Sea View)',
+      'Floor': '5th of 9 Floors',
+      'VMRDA Approved': 'Yes, Clear Title & Bank Loan Available',
+      'Furnishing': 'Fully Furnished (ACs, Wardrobes, Sofa)'
+    },
+    seller: {
+      id: 'sel-11',
+      name: 'V. R. Murthy (Direct Owner)',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
+      memberSince: 'February 2019',
+      rating: 5.0,
+      reviewsCount: 17,
+      isVerified: true,
+      verificationBadges: ['Aadhaar KYC', 'Title Deed Verified'],
+      responseTime: 'Replies in 30 mins',
+      city: 'Visakhapatnam'
+    },
+    isFeatured: true,
+    viewsCount: 2150,
+    likesCount: 310
+  }
+];
